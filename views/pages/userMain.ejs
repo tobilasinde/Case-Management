@@ -1,0 +1,28 @@
+<%- contentFor('main-content') %>
+<div style="margin-left:20px;">
+<p><%= userContents %></p>
+
+<p>See below User information you can make use of instantly:</p>
+
+<ul>
+    <li>User ID: <b><%= user.id %></b></li>
+    <li>Email: <b><%= user.email %></b></li>
+    <li>Username: <b><%= user.username %></b></li>
+    <li>Password (Encoded): <b><%= user.password %></b></li>
+    <li>User Status <b><%= user.status %></b></li>
+    <li>Full Name: <b><%= user.name %></b></li>
+    <li>Current Module Name:  <b><%= user.module_name %></b></li>
+    <li>Current Module Id:  <b><%= user.module_id %></b></li>
+    <li>User Account Id: <b><%= user.account_id %></b></li>
+    <li>User Permissions <b><%= user.permission %></b></li>
+    <li>User Department Name is  <b><%= department_name %> </b>and Depatment ID is <b><%= user.DepartmentId %> </b></li>
+    <li>User Profile Name is <b><%= profile_name %></b> and Profile ID is <b><%= user.ProfileId %> </b></li>
+    <li>User Role Name <b><%= role_name %> </b>and Role ID is <b><%= user.RoleId %> </b></li>
+    <li>User Current Business Name is <b><%= current_business_name %> </b>and Current Business ID is <b><%= user.CurrentBusinessId %></b></li>
+    <li>Last Login:  <b><%= user.last_login %></b></li>
+    <li>Session start date: <b><%= startDate %></b></li>
+</ul> 
+</div>
+
+<b>
+    

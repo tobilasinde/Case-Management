@@ -1,0 +1,10 @@
+<div class="col-sm-8">    
+        <div class="jumbotron">
+            <form action="/main/permission/<%= permission.id %>/update" method="post">
+               Permission Name:<br>
+              <input type="text" name="permission_name" value="<%= permission.permission_name %>">
+              <br><br>
+              <input type="submit" value="Update Permission">
+            </form>
+        </div>
+</div>

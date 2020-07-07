@@ -1,0 +1,14 @@
+<div class="col-sm-8">    
+    <div class="">
+    <ol>
+    <% profiles.forEach(function(profile) { %>
+            <li>
+                <h4><a href="/main/profile/<%= profile.id %>"><%= profile.profile_name %></a></h4>
+                 <a href="/main/profile/<%= profile.id %>/update">Edit  Profile</a> | <a href="/main/profile/<%= profile.id %>/delete">Delete Profile</a>
+            </li>
+        <br/>
+    <% }); %>
+    </ol>
+</div>
+<a href="/main/profile/create"> CLICK HERE TO CREATE PROFILE</a>
+</div>

@@ -1,0 +1,14 @@
+<div class="col-sm-8">    
+    <div class="">
+    <ol>
+    <% roles.forEach(function(role) { %>
+            <li>
+                <h4><a href="/main/role/<%= role.id %>"><%= role.role_name %></a></h4>
+                 <a href="/main/role/<%= role.id %>/update">Edit  Role</a> | <a href="/main/role/<%= role.id %>/delete">Delete Role</a>
+            </li>
+        <br/>
+    <% }); %>
+    </ol>
+</div>
+<a href="/main/role/create"> CLICK HERE TO CREATE ROLE</a>
+</div>

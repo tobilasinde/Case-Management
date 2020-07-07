@@ -1,0 +1,54 @@
+{
+  "name": "manifest-starter-kit",
+  "version": "1.0.0",
+  "description": "Starter kit for User Module",
+  "private": true,
+  "engines": {
+    "node": "12.x"
+  },
+  "scripts": {
+    "start": "DEBUG=express-sequelize node ./bin/www",
+    "start-dev": "cross-env DEBUG=express-sequelize nodemon ./bin/www",
+    "test": "npm run test-unit && npm run test-integration",
+    "test-unit": "cross-env NODE_ENV=test ./node_modules/.bin/mocha test/unit/*.test.js",
+    "test-integration": "cross-env NODE_ENV=test ./node_modules/.bin/mocha test/integration/*.test.js"
+  },
+  "author": "Babatope Olajide",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^3.2.0",
+    "bcrypt-nodejs": "0.0.3",
+    "bluebird": "^3.7.2",
+    "body-parser": "^1.19.0",
+    "connect-session-sequelize": "^6.1.1",
+    "cookie-parser": "^1.4.5",
+    "debug": "^4.1.1",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "express-session": "^1.17.1",
+    "morgan": "^1.10.0",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "pg": "^8.2.1",
+    "sequelize": "^5.21.13",
+    "sequelize-cli": "^5.5.1",
+    "serve-favicon": "~2.4.5",
+    "compression": "^1.7.4",
+    "crypto-js": "^4.0.0",
+    "ejs": "^3.0.1",
+    "express-validator": "^6.4.0",
+    "helmet": "^3.22.0",
+    "node-fetch": "^2.6.0",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "cross-env": "^3.2.4",
+    "ejs": "^3.0.1",
+    "expect.js": "^0.3.1",
+    "mocha": "^3.0.2",
+    "nodemon": "^2.0.2",
+    "supertest": "^2.0.0",
+    "chai": "^4.1.2",
+    "node-mocks-http": "^1.6.7"
+  }
+}

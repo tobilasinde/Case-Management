@@ -1,0 +1,10 @@
+<div class="col-sm-8">    
+        <div class="jumbotron">
+            <form action="/main/current-business/<%= currentBusiness.id %>/update" method="post">
+               Current Business Name:<br>
+              <input type="text" name="current_business_name" value="<%= currentBusiness.current_business_name %>">
+              <br><br>
+              <input type="submit" value="Update Current Business">
+            </form>
+        </div>
+</div>

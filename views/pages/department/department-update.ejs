@@ -1,0 +1,10 @@
+<div class="col-sm-8">    
+        <div class="jumbotron">
+            <form action="/main/department/<%= department.id %>/update" method="post">
+               Department Name:<br>
+              <input type="text" name="department_name" value="<%= department.department_name %>">
+              <br><br>
+              <input type="submit" value="Update Department">
+            </form>
+        </div>
+</div>

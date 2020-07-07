@@ -1,0 +1,10 @@
+<div class="col-sm-8">    
+        <div class="jumbotron">
+            <form action="/main/category/<%= category.id %>/update" method="post">
+               Category Name:<br>
+              <input type="text" name="category_name" value="<%= category.category_name %>">
+              <br><br>
+              <input type="submit" value="Update Category">
+            </form>
+        </div>
+</div>

@@ -1,0 +1,10 @@
+<div class="col-sm-8">    
+        <div class="jumbotron">
+            <form action="/main/profile/<%= profile.id %>/update" method="post">
+               Profile Name:<br>
+              <input type="text" name="profile_name" value="<%= profile.profile_name %>">
+              <br><br>
+              <input type="submit" value="Update Profile">
+            </form>
+        </div>
+</div>

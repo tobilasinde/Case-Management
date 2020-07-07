@@ -1,0 +1,22 @@
+<div class="">
+<h1>Details of a Single user - <%= user.first_name %> <%= user.last_name %> </h1>
+<p>I am an user for this ID = <%= user.id %></p>
+<p>User First Name: <%= user.first_name %></p>
+<p>User Last Name:  <%= user.last_name %></p>
+<p>User Email Address:  <%= user.email %></p>
+<p>User Username: <%= user.username %></p>
+<p>User Role:  <%= user.Role.role_name %></p>
+<p>User Department:  <%= user.Department.department_name %></p>
+<p>User Profile: <%= user.Profile.profile_name %></p>
+<p>User Current Business:  
+<% user.currentbusinesses.forEach(function(currentBusiness) { %>
+    <b> <%= currentBusiness.current_business_name %>,</b>
+    <% }); %>
+</p>
+<p>User Permission:   
+    <% user.permissions.forEach(function(permission) { %>
+    <b> <%= permission.permission_name %>,</b>
+    <% }); %>
+</p>
+<a href="/main/user/<%= user.id %>/update">Edit  User</a> | <a href="/main/user/<%= user.id %>/delete">Delete User</a>
+</div>

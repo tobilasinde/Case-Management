@@ -1,0 +1,14 @@
+<div class="col-sm-8">    
+    <div class="">
+    <ol>
+    <% permissions.forEach(function(permission) { %>
+            <li>
+                <h4><a href="/main/permission/<%= permission.id %>"><%= permission.permission_name %></a></h4>
+                 <a href="/main/permission/<%= permission.id %>/update">Edit  Permission</a> | <a href="/main/permission/<%= permission.id %>/delete">Delete Permission</a>
+            </li>
+        <br/>
+    <% }); %>
+    </ol>
+</div>
+<a href="/main/permission/create"> CLICK HERE TO CREATE PERMISSION</a>
+</div>

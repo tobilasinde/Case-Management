@@ -1,0 +1,20 @@
+ <div class="col-sm-8">    
+        <div class="">
+        
+            <h1>Post Details - <%= post.post_title %>  </h1>
+            <p>I am a post for this ID = <%= post.id %></p>
+            <p>Post Title: <%= post.post_title %></p>
+            <p>Post Body:  <%= post.post_body %></p>
+            <p>
+            <b>Posted by User: </b> <%= post.User.first_name %> <%= post.User.last_name %> <br/>
+            <b>User belongs to this Current Business</b> <%= post.CurrentBusiness.current_business_name %><br/>
+            <b>Poast was made when user was in this Department: </b> <%= post.Department.department_name %> <br/>
+            <b>inside these Categories:</b> 
+             <% post.categories.forEach(function(category) { %>  <a href="/main/category/<%= category.id %>/"> <%= category.category_name %> </a>  
+            <% }); %>
+            </p>
+            <a href="/main/post/<%= post.id %>/update">Edit  Post</a> | <a href="/main/post/<%= post.id %>/delete">Delete Post</a>
+
+        
+        </div>
+    </div>

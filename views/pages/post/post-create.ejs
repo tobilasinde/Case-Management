@@ -1,0 +1,33 @@
+    <div class="col-sm-8">    
+        <div class="jumbotron">
+            <form action="" method="post">
+              Post Title:<br>
+              <input type="text" name="post_title" placeholder="Post Title" value="">
+              <br><br/>
+              Post Body:<br>
+              <input type="text" name="post_body" placeholder="Post Body" value="">
+              <br><br>
+              User:<br>
+               <select name = "user_id">
+                    <% users.forEach(function(user) { %>
+                    <option  value="<%= user.id %>"><%= user.first_name %></option>
+                <br/>
+               <% }); %>
+                </select>
+            <br><br>
+            
+              Category:<br>
+                <div>
+                     <% categories.forEach(function(category) { %>
+                    <input type="checkbox" class='categoryCheckbox' name="categories" id="<%= category.id %>" value="<%= category.id %>">
+                    <label for="<%= category.category_name %>"><%= category.category_name %></label>
+                <br/>
+               <% }); %>
+                 </div>
+                 </br>
+               <input type="submit" value="Create Post"  >
+             </form>
+
+        </div>
+    </div>
+    

@@ -1,0 +1,14 @@
+<div class="col-sm-8">    
+    <div class="">
+    <ol>
+    <% departments.forEach(function(department) { %>
+            <li>
+                <h4><a href="/main/department/<%= department.id %>"><%= department.department_name %></a></h4>
+                 <a href="/main/department/<%= department.id %>/update">Edit  Department</a> | <a href="/main/department/<%= department.id %>/delete">Delete Department</a>
+            </li>
+        <br/>
+    <% }); %>
+    </ol>
+</div>
+<a href="/main/department/create"> CLICK HERE TO CREATE DEPARTMENT</a>
+</div>

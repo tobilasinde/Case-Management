@@ -1,0 +1,33 @@
+<div class="col-sm-12">    
+    <div class="">
+<table style="width:100%; text-align:left; padding:1px;" border="1">
+  <tr>
+    <th style="text-align:center;">ID</th>
+    <th style="text-align:center;">Username</th>
+    <th style="text-align:center;">Email</th>
+    <th style="text-align:center;">Current Business ID</th>
+    <th style="text-align:center;">Permissions</th>
+    <th style="text-align:center;">Department ID</th>
+    <th style="text-align:center;">Role ID</th>
+    <th style="text-align:center;">Profile ID</th>
+    <th style="text-align:center;">Action</th>
+  </tr>
+  <ol><% users.forEach(function(user) { %>
+  <tr>
+    <td style="padding-left:5px"><a href="/main/user/<%= user.id %>"><%= user.id %></a></td>
+    <td style="padding-left:10px"><%= user.username %></td>
+    <td style="padding-left:10px"><%= user.email %></td>
+    <td style="text-align:center;"><%= user.CurrentBusinessId %></td>
+    <td style="padding-left:10px"><%= user.permission %></td>
+    <td style="text-align:center;"><%= user.DepartmentId %></td>
+    <td style="text-align:center;"><%= user.RoleId %></td>
+    <td style="text-align:center;"><%= user.ProfileId %></td>
+    <td style="text-align:center;">  <a href="/main/user/<%= user.id %>/delete">Delete User</a></td>
+  </tr>
+  <% }); %>   </ol>
+</table>
+</div>
+<br/>
+</div>
+ 
+ 

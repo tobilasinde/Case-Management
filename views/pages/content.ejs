@@ -1,0 +1,183 @@
+<%- contentFor('main-content') %>
+
+<% switch (functioName) {
+
+// USER PAGES
+case 'GET USER CREATE' : %>
+       <%- include ('../pages/user/user-create') %>
+       <% break;
+
+case 'GET USER UPDATE' : %>
+       <%- include ('../pages/user/user-update') %>
+       <% break;
+       
+case 'GET USER DETAILS' : %>
+       <%- include ('../pages/user/user-details') %>
+       <% break;
+       
+case 'GET USER LIST' : %>
+       <%- include ('../pages/user/user-list') %>
+       <% break;
+
+case 'GET USER PAGE' : %>
+       <%- include ('../pages/userMain') %>
+       <% break;
+       
+// LOGIN & SIGN UP PAGES
+case 'GET LOGIN PAGE' : %>
+       <%- include ('../pages/user/user-login') %>
+       <% break;
+
+case 'GET SIGNUP PAGE' : %>
+       <%- include ('../pages/user/user-create') %>
+       <% break;
+       
+// POST PAGES
+
+case 'GET POST CREATE' : %>
+       <%- include ('../pages/post/post-create') %>
+       <% break;
+
+case 'GET POST UPDATE' : %>
+       <%- include ('../pages/post/post-update') %>
+       <% break;
+       
+case 'GET POST DETAILS' : %>
+       <%- include ('../pages/post/post-details') %>
+       <% break;
+       
+case 'GET POST LIST' : %>
+       <%- include ('../pages/post/post-list') %>
+       <% break;
+
+// CATEGORY PAGES
+
+case 'GET CATEGORY CREATE' : %>
+       <%- include ('../pages/category/category-create') %>
+       <% break;
+
+case 'GET CATEGORY UPDATE' : %>
+       <%- include ('../pages/category/category-update') %>
+       <% break;
+       
+case 'GET CATEGORY DETAILS' : %>
+       <%- include ('../pages/category/category-details') %>
+       <% break;
+       
+case 'GET CATEGORY LIST' : %>
+       <%- include ('../pages/category/category-list') %>
+       <% break;
+       
+// PERMISSION PAGES
+
+case 'GET PERMISSION CREATE' : %>
+       <%- include ('../pages/permission/permission-create') %>
+       <% break;
+
+case 'GET PERMISSION UPDATE' : %>
+       <%- include ('../pages/permission/permission-update') %>
+       <% break;
+       
+case 'GET PERMISSION DETAILS' : %>
+       <%- include ('../pages/permission/permission-details') %>
+       <% break;
+       
+case 'GET PERMISSION LIST' : %>
+       <%- include ('../pages/permission/permission-list') %>
+       <% break;
+       
+
+// AUTHOR PAGES
+
+case 'GET AUTHOR CREATE' : %>
+       <%- include ('../pages/author/author-create') %>
+       <% break;
+
+case 'GET AUTHOR UPDATE' : %>
+       <%- include ('../pages/author/author-update') %>
+       <% break;
+       
+case 'GET AUTHOR DETAILS' : %>
+       <%- include ('../pages/author/author-details') %>
+       <% break;
+       
+case 'GET AUTHOR LIST' : %>
+       <%- include ('../pages/author/author-list') %>
+       <% break;
+      
+// ROLE PAGES
+
+case 'GET ROLE CREATE' : %>
+       <%- include ('../pages/role/role-create') %>
+       <% break;
+
+case 'GET ROLE UPDATE' : %>
+       <%- include ('../pages/role/role-update') %>
+       <% break;
+       
+case 'GET ROLE DETAILS' : %>
+       <%- include ('../pages/role/role-details') %>
+       <% break;
+       
+case 'GET ROLE LIST' : %>
+       <%- include ('../pages/role/role-list') %>
+       <% break;
+       
+// PROFILE PAGES
+
+case 'GET PROFILE CREATE' : %>
+       <%- include ('../pages/profile/profile-create') %>
+       <% break;
+
+case 'GET PROFILE UPDATE' : %>
+       <%- include ('../pages/profile/profile-update') %>
+       <% break;
+       
+case 'GET PROFILE DETAILS' : %>
+       <%- include ('../pages/profile/profile-details') %>
+       <% break;
+       
+case 'GET PROFILE LIST' : %>
+       <%- include ('../pages/profile/profile-list') %>
+       <% break;
+       
+// DEPARTMENT PAGES
+
+case 'GET DEPARTMENT CREATE' : %>
+       <%- include ('../pages/department/department-create') %>
+       <% break;
+
+case 'GET DEPARTMENT UPDATE' : %>
+       <%- include ('../pages/department/department-update') %>
+       <% break;
+       
+case 'GET DEPARTMENT DETAILS' : %>
+       <%- include ('../pages/department/department-details') %>
+       <% break;
+       
+case 'GET DEPARTMENT LIST' : %>
+       <%- include ('../pages/department/department-list') %>
+       <% break;
+
+// CURRENT BUSINESS PAGES
+
+case 'GET CURRENT BUSINESS CREATE' : %>
+       <%- include ('../pages/currentBusiness/current-business-create') %>
+       <% break;
+
+case 'GET CURRENT BUSINESS UPDATE' : %>
+       <%- include ('../pages/currentBusiness/current-business-update') %>
+       <% break;
+       
+case 'GET CURRENT BUSINESS DETAILS' : %>
+       <%- include ('../pages/currentBusiness/current-business-details') %>
+       <% break;
+       
+case 'GET CURRENT BUSINESS LIST' : %>
+       <%- include ('../pages/currentBusiness/current-business-list') %>
+       <% break;    
+       
+default : %>
+       <%- include ('../pages/index') %>
+       <%  
+} %>

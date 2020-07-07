@@ -1,0 +1,35 @@
+    <div class="col-sm-8">    
+        <div class="jumbotron">
+            <form action="/main/post/<%= post.id %>/update" method="post">
+              Post Title:<br>
+              <input type="text" name="post_title" value="<%= post.post_title %>" placeholder="Post Title" value="" >
+              <br><br/>
+              Post Body:<br>
+              <input type="text" name="post_body" value="<%= post.post_body %>" placeholder="Post Body" value="">
+              <br><br>
+              Posted By:<br>
+             <select name = "user_id">
+                <% users.forEach(function(user) { 
+                     var selected = ( post.User.id == user.id ) ? "selected" : false;  %>
+                    <option value="<%= user.id %>" <%=selected%> >
+                        <%=user.first_name%>
+                    </option>
+                <% }); %>
+             </select>
+            <br><br>
+              Category:<br>
+                <div>
+                     <% categories.forEach(function(category) { %>
+                    <input type="checkbox" class='categoryCheckbox' name="categories" id="<%= category.id %>" value="<%= category.id %>">
+                    <label for="<%= category.category_name %>"><%= category.category_name %></label>
+                <br/>
+               <% }); %>
+                 </div>
+                 </br>
+               <input type="submit" value="Update Post"  >
+             </form>
+
+        </div>
+    </div>
+    
+ 

@@ -1,0 +1,14 @@
+<div class="col-sm-8">    
+    <div class="">
+    <ol>
+    <% currentBusinesses.forEach(function(currentBusiness) { %>
+            <li>
+                <h4><a href="/main/current-business/<%= currentBusiness.id %>"><%= currentBusiness.current_business_name %></a></h4>
+                 <a href="/main/current-business/<%= currentBusiness.id %>/update">Edit  Current Business</a> | <a href="/main/current-business/<%= currentBusiness.id %>/delete">Delete Current Business</a>
+            </li>
+        <br/>
+    <% }); %>
+    </ol>
+</div>
+<a href="/main/current-business/create"> CLICK HERE TO CREATE CURRENT BUSINESS</a>
+</div>

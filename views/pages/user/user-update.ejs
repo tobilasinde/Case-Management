@@ -1,0 +1,89 @@
+ <div class="col-sm-8">    
+        <div class="jumbotron">
+            <form action="" method="post">
+              User First Name:<br>
+              <input type="text" name="first_name" value="<%= user.first_name %>" placeholder="User First Name">
+              <br><br>
+              User Last Name:<br>
+              <input type="text" name="last_name" value="<%= user.last_name %>" placeholder="User Last Name">
+              <br><br>
+              Username:<br>
+              <input type="text" name="username" value="<%= user.username %>" placeholder="manifest007">
+              <br><br>
+              User Email Address:<br>
+              <input type="email" name="email" value="<%= user.email %>" placeholder="hello@manifest.com">
+              <br><br>
+              Department:<br>
+              <select name = "department_id">
+                <% departments.forEach(function(department) { 
+                     var selected = ( user.Department.id == department.id ) ? "selected" : false;  %>
+                    <option value="<%= department.id %>" <%=selected%> >
+                        <%=department.department_name%>
+                    </option>
+                <% }); %>
+              </select>
+            <br><br>
+            Role:<br>
+            <select name = "role_id">
+                <% roles.forEach(function(role) { 
+                     var selected = ( user.Role.id == role.id ) ? "selected" : false;  %>
+                    <option value="<%= role.id %>" <%=selected%> >
+                        <%=role.role_name%>
+                    </option>
+                <% }); %>
+             </select>
+            <br><br> 
+            Profile:<br>
+             <select name = "profile_id">
+                <% profiles.forEach(function(profile) { 
+                     var selected = ( user.Profile.id == profile.id ) ? "selected" : false;  %>
+                    <option value="<%= profile.id %>" <%=selected%> >
+                        <%=profile.profile_name%>
+                    </option>
+                <% }); %>
+             </select>
+            <br><br>
+            Current Business:<br>
+               <select name = "current_business_id">
+                    <% currentBusinesses.forEach(function(currentBusiness) { %>
+                    <option  value="<%= currentBusiness.id %>"><%= currentBusiness.current_business_name %></option>
+                <br/>
+               <% }); %>
+                </select>
+            <br><br>
+              <h5>Permissions:</h5> 
+                 
+                <div>
+                  <% permissions.forEach(function(permission) { 
+                   for ( let i = 0; i < permissions.length; i++ )
+                    { 
+                        checked = ( user.permissions.indexOf(permissions[i].id) > -1 ) ? "checked" : false; 
+                    }
+                  %>
+                <input type="checkbox" class='permissionCheckbox' name="permissions" id="<%= permission.id %>" 
+                value = "<%= permission.id %>" <%= checked %> >
+                <label for="<%= permission.permission_name %>"><%= permission.permission_name %></label>
+                <br/>
+               <% }); %>
+                 </div>
+          <br/>
+              <input type="submit" value="Update User" onClick="checkPermission()">
+            </form>
+        </div>
+    </div>
+ 
+    <script>
+    function checkPermission() {
+    var checkBoxes = document.getElementsByClassName( 'permissionCheckbox' );
+    var isChecked = false;
+    for (var i = 0; i < checkBoxes.length; i++) {
+        if ( checkBoxes[i].checked ) {
+            isChecked = true;
+        };
+    };
+    // if (isChecked ) {
+    //     } else {
+    //         alert( 'Please, check at least one permission for user!' );
+    // }   
+}
+</script>

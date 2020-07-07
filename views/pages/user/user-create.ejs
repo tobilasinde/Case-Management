@@ -1,0 +1,81 @@
+ <div class="col-sm-8">    
+        <div class="jumbotron">
+            <form action="" method="post">
+              User First Name:<br>
+              <input type="text" name="first_name" value="" placeholder="Babatope">
+              <br><br>
+              User Last Name:<br>
+              <input type="text" name="last_name" value="" placeholder="Olajide">
+              <br><br>
+              Username:<br>
+              <input type="text" name="username" value="" placeholder="manifest007">
+              <br><br>
+              Password:<br>
+              <input type="password" name="password" value="" placeholder="password123">
+              <br><br>
+              User Email Address:<br>
+              <input type="email" name="email" value="" placeholder="hello@manifest.com">
+              <br><br>
+              Department:<br>
+               <select name = "department_id">
+                    <% departments.forEach(function(department) { %>
+                    <option  value="<%= department.id %>"><%= department.department_name %></option>
+                <br/>
+               <% }); %>
+                </select>
+            <br><br>
+            Role:<br>
+               <select name = "role_id">
+                    <% roles.forEach(function(role) { %>
+                    <option  value="<%= role.id %>"><%= role.role_name %></option>
+                <br/>
+               <% }); %>
+                </select>
+            <br><br>
+            Profile:<br>
+               <select name = "profile_id">
+                    <% profiles.forEach(function(profile) { %>
+                    <option  value="<%= profile.id %>"><%= profile.profile_name %></option>
+                <br/>
+               <% }); %>
+                </select>
+            <br><br>
+            Current Business:<br>
+               <select name = "current_business_id">
+                    <% currentBusinesses.forEach(function(currentBusiness) { %>
+                    <option  value="<%= currentBusiness.id %>"><%= currentBusiness.current_business_name %></option>
+                <br/>
+               <% }); %>
+                </select>
+            <br><br>
+              <h5>Permissions:</h5> 
+                <div>
+                     <% permissions.forEach(function(permission) { %>
+                    <input type="checkbox" class='permissionCheckbox' name="permissions" id="<%= permission.id %>" value="<%= permission.id %>">
+                    <label for="<%= permission.permission_name %>"><%= permission.permission_name %></label>
+                    
+                <br/>
+               <% }); %>
+                 </div>
+          <br/>
+              <input type="submit" value="Create User" onClick="checkPermission()">
+            </form>
+        </div>
+    </div>
+    
+        
+    <script>
+    function checkPermission() {
+    var checkBoxes = document.getElementsByClassName( 'permissionCheckbox' );
+    var isChecked = false;
+    for (var i = 0; i < checkBoxes.length; i++) {
+        if ( checkBoxes[i].checked ) {
+            isChecked = true;
+        };
+    };
+    // if (isChecked ) {
+    //     } else {
+    //         alert( 'Please, check at least one permission for user!' );
+    // }   
+}
+</script>
