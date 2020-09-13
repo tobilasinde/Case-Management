@@ -38,7 +38,7 @@
     "ejs": "^3.0.1",
     "express-validator": "^6.4.0",
     "helmet": "^3.22.0",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "request": "^2.88.2"
   },
   "devDependencies": {
